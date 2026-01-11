@@ -1,0 +1,28 @@
+#include<stdio.h>
+int findMax(int arr[], int n);
+int main() 
+{
+    int arr[100], n, i, max;
+    printf("Enter the number of elements in array: ");
+    scanf("%d", &n);
+    printf("Enter %d elements:\n", n);
+    for (i = 0; i < n; i++) 
+	{
+        scanf("%d", &arr[i]);
+    }
+    max = findMax(arr, n);
+    printf("Maximum number is: %d\n", max);
+    return 0;
+}
+int findMax(int arr[], int n) 
+{
+	int i;
+    int max = arr[0];
+    for (i=1;i<n;i++) 
+	{
+        if (arr[i] > max)
+            max = arr[i];
+    }
+    return max;
+}
+
